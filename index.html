@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2a0a3d">
+<title>For My Jannuuu Kritika ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400..700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   BASE
+============================================================ */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --pink:#ff7ab8;
+  --pink-hot:#ff4d94;
+  --pink-soft:#ffd1e6;
+  --purple:#b57bff;
+  --purple-deep:#8b5cf6;
+  --lav:#e7d4ff;
+  --glass:rgba(255,255,255,.07);
+  --glass-brd:rgba(255,255,255,.16);
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Quicksand',system-ui,sans-serif;
+  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 15% 8%, #4a1163 0%, transparent 42%),
+    radial-gradient(circle at 85% 15%, #7a1b5a 0%, transparent 38%),
+    radial-gradient(circle at 50% 92%, #3b0a55 0%, transparent 48%),
+    linear-gradient(165deg,#1a0626 0%,#2a0a3d 38%,#3d0f4a 68%,#1a0626 100%);
+  background-attachment:fixed;
+}
+
+body.locked{overflow:hidden;}
+
+::selection{background:var(--pink-hot);color:#fff;}
+
+::-webkit-scrollbar{width:9px;}
+::-webkit-scrollbar-track{background:#1a0626;}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,var(--pink-hot),var(--purple));
+  border-radius:10px;
+}
+
+/* ============================================================
+   AURORA BACKGROUND GLOW
+============================================================ */
+.aurora{
+  position:fixed;
+  inset:-25%;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 28% 32%, rgba(255,77,148,.28), transparent 42%),
+    radial-gradient(circle at 72% 58%, rgba(181,123,255,.24), transparent 44%),
+    radial-gradient(circle at 50% 85%, rgba(255,122,184,.16), transparent 40%);
+  animation:auroraMove 20s ease-in-out infinite alternate;
+  filter:blur(10px);
+}
+@keyframes auroraMove{
+  from{transform:translate(-2%,-2%) scale(1);}
+  to{transform:translate(3%,3%) scale(1.18);}
+}
+
+/* ============================================================
+   FLOATING HEARTS
+============================================================ */
+#heartsBg{
+  position:fixed;
+  inset:0;
+  z-index:250;
+  pointer-events:none;
+  overflow:hidden;
+}
+.heart-float{
+  position:absolute;
+  bottom:-70px;
+  will-change:transform,opacity;
+  animation-name:floatUp;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  text-shadow:0 0 10px currentColor, 0 0 22px currentColor;
+  user-select:none;
+  filter:saturate(1.1);
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0deg) scale(.7);opacity:0;}
+  12%{opacity:1;}
+  85%{opacity:.55;}
+  100%{transform:translateY(-118vh) rotate(300deg) scale(1.15);opacity:0;}
+}
+
+/* ============================================================
+   OPENING SCREEN
+============================================================ */
+.opening{
+  position:fixed;
+  inset:0;
+  z-index:200;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:32px 24px;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255,77,148,.25), transparent 55%),
+    radial-gradient(circle at 50% 82%, rgba(181,123,255,.22), transparent 55%),
+    linear-gradient(165deg,#170522 0%,#2a0a3d 45%,#1a0626 100%);
+  transition:opacity 1.1s ease, visibility 1.1s ease;
+}
+.opening.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.opening .beat-heart{
+  font-size:clamp(52px,16vw,76px);
+  line-height:1;
+  margin-bottom:16px;
+  animation:beat 1.6s ease-in-out infinite;
+  filter:drop-shadow(0 0 24px rgba(255,77,148,.95)) drop-shadow(0 0 50px rgba(181,123,255,.7));
+}
+@keyframes beat{
+  0%,100%{transform:scale(1);}
+  22%{transform:scale(1.18);}
+  38%{transform:scale(.95);}
+  58%{transform:scale(1.1);}
+}
+
+.opening .kicker{
+  font-size:.78rem;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  color:var(--pink-soft);
+  opacity:.8;
+  margin-bottom:14px;
+  animation:fadeUp 1s ease .15s both;
+}
+
+.opening h1{
+  font-weight:700;
+  font-size:clamp(1.35rem,5.6vw,2.1rem);
+  line-height:1.35;
+  letter-spacing:.5px;
+  animation:fadeUp 1s ease .3s both;
+}
+.opening h1 .name{
+  display:block;
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+  font-size:clamp(3.2rem,15vw,5.6rem);
+  line-height:1.15;
+  margin-top:4px;
+  background:linear-gradient(90deg,#ffd1e6,#ff7ab8,#b57bff,#ffd1e6);
+  background-size:300% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:shimmerText 6s linear infinite;
+  filter:drop-shadow(0 0 26px rgba(255,122,184,.55));
+}
+@keyframes shimmerText{
+  to{background-position:300% 0;}
+}
+
+.opening .sub{
+  margin-top:18px;
+  font-size:.95rem;
+  color:var(--lav);
+  opacity:.75;
+  max-width:340px;
+  line-height:1.6;
+  animation:fadeUp 1s ease .45s both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+
+.btn{
+  position:relative;
+  margin-top:36px;
+  padding:17px 42px;
+  border:none;
+  border-radius:999px;
+  font-family:'Quicksand',sans-serif;
+  font-weight:700;
+  font-size:1rem;
+  letter-spacing:.6px;
+  color:#fff;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ff4d94 0%,#c05cff 100%);
+  box-shadow:0 12px 34px rgba(255,77,148,.45), 0 0 0 1px rgba(255,255,255,.22) inset;
+  transition:transform .35s cubic-bezier(.2,.8,.3,1.4), box-shadow .35s;
+  overflow:hidden;
+  animation:fadeUp 1s ease .6s both;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:hover{
+  transform:translateY(-4px) scale(1.04);
+  box-shadow:0 18px 46px rgba(181,123,255,.65), 0 0 0 1px rgba(255,255,255,.3) inset;
+}
+.btn:active{transform:translateY(-1px) scale(.99);}
+.btn::after{
+  content:'';
+  position:absolute;
+  top:0;left:-130%;
+  width:55%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);
+  transform:skewX(-22deg);
+  animation:shine 3.4s ease-in-out infinite;
+}
+@keyframes shine{
+  0%{left:-130%;}
+  55%{left:140%;}
+  100%{left:140%;}
+}
+.btn-pulse{
+  position:absolute;
+  inset:-6px;
+  border-radius:999px;
+  border:1.5px solid rgba(255,122,184,.55);
+  animation:pulseRing 2.4s ease-out infinite;
+  pointer-events:none;
+}
+@keyframes pulseRing{
+  0%{transform:scale(.94);opacity:.9;}
+  100%{transform:scale(1.22);opacity:0;}
+}
+
+.opening .made{
+  position:absolute;
+  bottom:26px;
+  font-size:.72rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--lav);
+  opacity:.45;
+}
+
+/* ============================================================
+   LAYOUT
+============================================================ */
+main{position:relative;z-index:1;}
+
+.section{
+  position:relative;
+  z-index:1;
+  max-width:1000px;
+  margin:0 auto;
+  padding:88px 20px;
+}
+
+.sec-title{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(2.1rem,8vw,3.4rem);
+  line-height:1.25;
+  text-align:center;
+  background:linear-gradient(90deg,#ffd1e6,#ff7ab8,#c79bff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 20px rgba(255,122,184,.35));
+  margin-bottom:10px;
+}
+.sec-sub{
+  text-align:center;
+  color:var(--lav);
+  opacity:.72;
+  font-size:.9rem;
+  line-height:1.6;
+  letter-spacing:.4px;
+  margin-bottom:40px;
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:0 auto 30px;
+  max-width:240px;
+  opacity:.65;
+}
+.divider span{
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,var(--pink),transparent);
+}
+.divider i{
+  font-style:normal;
+  color:var(--pink);
+  font-size:.85rem;
+  filter:drop-shadow(0 0 8px var(--pink-hot));
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(38px);
+  transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.3,1);
+  transition-delay:var(--d,0s);
+}
+.reveal.in{opacity:1;transform:none;}
+
+/* ============================================================
+   SECTION 2 — PERSONAL MESSAGE
+============================================================ */
+.glow-frame{
+  position:relative;
+  max-width:730px;
+  margin:0 auto;
+  padding:2px;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 26px 70px rgba(0,0,0,.5), 0 0 70px rgba(255,77,148,.2);
+}
+.glow-frame::before{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  width:220%;height:220%;
+  transform:translate(-50%,-50%);
+  background:conic-gradient(from 0deg,#ff4d94,#b57bff,#ffd1e6,#ff4d94);
+  animation:spin 7s linear infinite;
+}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+.letter-card{
+  position:relative;
+  z-index:1;
+  border-radius:26px;
+  padding:38px 26px 34px;
+  background:linear-gradient(160deg,#2c0b40 0%,#3d1155 55%,#280a3b 100%);
+  text-align:left;
+}
+.letter-card .quote-mark{
+  font-family:'Great Vibes',cursive;
+  font-size:3.4rem;
+  line-height:.6;
+  color:var(--pink);
+  opacity:.55;
+  display:block;
+  margin-bottom:14px;
+}
+.letter-card p{
+  font-size:1rem;
+  line-height:1.95;
+  color:#f4e8ff;
+  margin-bottom:16px;
+  font-weight:400;
+}
+.letter-card p:last-child{margin-bottom:0;}
+.letter-card .hi{
+  font-family:'Dancing Script',cursive;
+  font-size:1.6rem;
+  color:var(--pink-soft);
+  margin-bottom:14px;
+  text-shadow:0 0 18px rgba(255,122,184,.5);
+}
+.letter-card .sign{
+  font-family:'Dancing Script',cursive;
+  font-size:1.35rem;
+  color:var(--pink);
+  text-align:right;
+  margin-top:22px;
+  text-shadow:0 0 16px rgba(255,77,148,.45);
+}
+
+/* ---- SPECIAL NOTE ---- */
+.special-note{
+  position:relative;
+  max-width:730px;
+  margin:30px auto 0;
+  padding:22px 26px 24px 30px;
+  border-radius:22px;
+  background:linear-gradient(160deg,rgba(255,77,148,.16),rgba(181,123,255,.13));
+  border:1px solid rgba(255,122,184,.45);
+  box-shadow:0 16px 40px rgba(255,77,148,.22), inset 0 0 40px rgba(255,122,184,.1);
+  animation:noteGlow 3.8s ease-in-out infinite;
+  overflow:hidden;
+}
+@keyframes noteGlow{
+  0%,100%{box-shadow:0 16px 40px rgba(255,77,148,.22), inset 0 0 40px rgba(255,122,184,.1);}
+  50%{box-shadow:0 20px 54px rgba(181,123,255,.4), inset 0 0 56px rgba(255,122,184,.2);}
+}
+.special-note::before{
+  content:'';
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:4px;
+  background:linear-gradient(180deg,#ff4d94,#b57bff);
+  box-shadow:0 0 18px rgba(255,77,148,.85);
+}
+.sn-label{
+  display:inline-block;
+  font-size:.65rem;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--pink-soft);
+  opacity:.85;
+  margin-bottom:11px;
+}
+.special-note p{
+  font-size:clamp(.95rem,3.6vw,1.06rem);
+  line-height:1.95;
+  color:#fdf1ff;
+  letter-spacing:.3px;
+  word-break:break-word;
+  font-weight:500;
+}
+.special-note .sn-heart{
+  display:inline-block;
+  margin-left:5px;
+  animation:beat 1.6s ease-in-out infinite;
+}
+
+/* stats */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  max-width:730px;
+  margin:32px auto 0;
+}
+.stat{
+  text-align:center;
+  padding:18px 6px;
+  border-radius:16px;
+  background:var(--glass);
+  border:1px solid var(--glass-brd);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.stat:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(255,77,148,.3);
+}
+.stat-num{
+  display:block;
+  font-size:1.35rem;
+  font-weight:700;
+  background:linear-gradient(135deg,#ffd1e6,#ff7ab8);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.stat-label{
+  display:block;
+  font-size:.63rem;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  color:var(--lav);
+  opacity:.7;
+  margin-top:5px;
+}
+
+/* ============================================================
+   SECTION 3 — 7 REASONS
+============================================================ */
+.reasons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(142px,1fr));
+  gap:14px;
+  max-width:920px;
+  margin:0 auto;
+}
+.reason{
+  perspective:1100px;
+  height:220px;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.reason-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transition:transform .85s cubic-bezier(.25,.8,.3,1);
+}
+.reason.flipped .reason-inner{transform:rotateY(180deg);}
+
+.reason-face{
+  position:absolute;
+  inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  border-radius:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+  text-align:center;
+  border:1px solid var(--glass-brd);
+  overflow:hidden;
+}
+.reason-front{
+  background:linear-gradient(160deg,rgba(255,122,184,.2),rgba(181,123,255,.14));
+  box-shadow:0 14px 34px rgba(0,0,0,.35), inset 0 0 34px rgba(255,122,184,.14);
+  transition:box-shadow .35s ease;
+}
+.reason:hover .reason-front{
+  box-shadow:0 18px 44px rgba(0,0,0,.45), inset 0 0 46px rgba(255,122,184,.3);
+}
+.reason-front .num{
+  font-family:'Great Vibes',cursive;
+  font-size:2.7rem;
+  line-height:1;
+  background:linear-gradient(135deg,#ffd1e6,#ff7ab8);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 14px rgba(255,77,148,.6));
+}
+.reason-front .tap{
+  margin-top:12px;
+  font-size:.66rem;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:var(--lav);
+  opacity:.7;
+}
+.reason-front .tiny-heart{
+  font-size:1rem;
+  margin-top:9px;
+  opacity:.85;
+  animation:beat 2s ease-in-out infinite;
+}
+.reason-back{
+  transform:rotateY(180deg);
+  background:linear-gradient(160deg,#ff4d94 0%,#b57bff 100%);
+  box-shadow:0 16px 40px rgba(255,77,148,.4);
+  gap:6px;
+}
+.reason-back .rb-icon{font-size:1.25rem;line-height:1;}
+.reason-back .rb-title{
+  font-size:.76rem;
+  font-weight:700;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+}
+.reason-back .rb-text{
+  font-size:.72rem;
+  line-height:1.4;
+  font-weight:500;
+  opacity:.97;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+/* ============================================================
+   SECTION 5 — LETTER ON PAPER
+============================================================ */
+.paper-wrap{
+  max-width:700px;
+  margin:0 auto;
+  padding-top:10px;
+}
+.paper{
+  position:relative;
+  padding:48px 28px 52px;
+  border-radius:8px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255,255,255,.85), transparent 40%),
+    linear-gradient(160deg,#fff7fb 0%,#ffe8f3 55%,#f7e4ff 100%);
+  color:#5a2140;
+  box-shadow:0 28px 70px rgba(0,0,0,.45), 0 0 70px rgba(255,122,184,.28);
+  transform:rotate(-.7deg);
+  font-family:'Dancing Script',cursive;
+}
+.paper::before{
+  content:'';
+  position:absolute;
+  top:-13px;left:50%;
+  transform:translateX(-50%) rotate(-3deg);
+  width:130px;height:28px;
+  border-radius:3px;
+  background:linear-gradient(90deg,rgba(255,122,184,.8),rgba(181,123,255,.8));
+  box-shadow:0 6px 16px rgba(0,0,0,.22);
+}
+.paper .p-head{
+  font-size:clamp(1.35rem,5vw,1.75rem);
+  color:#c2185b;
+  margin-bottom:16px;
+  line-height:1.4;
+}
+.paper p{
+  font-size:clamp(1rem,3.8vw,1.2rem);
+  line-height:1.85;
+  margin-bottom:14px;
+  color:#5a2140;
+  word-break:break-word;
+}
+.paper .p-sign{
+  margin-top:24px;
+  font-size:clamp(1.15rem,4.4vw,1.4rem);
+  text-align:right;
+  color:#c2185b;
+  line-height:1.5;
+}
+.paper .seal{
+  position:absolute;
+  right:20px;
+  bottom:-20px;
+  width:62px;height:62px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:1.5rem;
+  background:radial-gradient(circle at 34% 28%,#ff8fbf,#d81b60 70%);
+  box-shadow:0 10px 24px rgba(216,27,96,.55), inset 0 -4px 10px rgba(0,0,0,.25);
+  transform:rotate(-8deg);
+}
+
+/* ============================================================
+   SECTION 6 — FUTURE TIMELINE
+============================================================ */
+.timeline{
+  position:relative;
+  max-width:720px;
+  margin:0 auto;
+  padding-left:44px;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:17px;top:6px;bottom:6px;
+  width:2px;
+  border-radius:2px;
+  background:linear-gradient(180deg,transparent,#ff4d94 12%,#b57bff 88%,transparent);
+  box-shadow:0 0 16px rgba(255,77,148,.85);
+}
+.tl-item{
+  position:relative;
+  margin-bottom:18px;
+}
+.tl-item::before{
+  content:'💗';
+  position:absolute;
+  left:-44px;
+  top:12px;
+  width:36px;height:36px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  font-size:.9rem;
+  background:rgba(42,10,61,.95);
+  border:1px solid rgba(255,122,184,.55);
+  box-shadow:0 0 20px rgba(255,77,148,.6);
+}
+.tl-card{
+  background:var(--glass);
+  border:1px solid var(--glass-brd);
+  border-radius:16px;
+  padding:16px 18px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s;
+}
+.tl-card:hover{
+  transform:translateX(6px);
+  border-color:rgba(255,122,184,.5);
+  box-shadow:0 14px 36px rgba(255,77,148,.28);
+}
+.tl-card h4{
+  font-size:.98rem;
+  font-weight:700;
+  color:var(--pink-soft);
+  margin-bottom:6px;
+  letter-spacing:.3px;
+}
+.tl-card p{
+  font-size:.85rem;
+  line-height:1.65;
+  color:var(--lav);
+  opacity:.82;
+}
+
+/* ============================================================
+   SECTION 7 — FINAL SURPRISE
+============================================================ */
+.final{
+  text-align:center;
+  padding-bottom:60px;
+}
+.big-heart{
+  display:inline-block;
+  font-size:clamp(96px,30vw,168px);
+  line-height:1;
+  cursor:pointer;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  animation:beat 1.7s ease-in-out infinite;
+  filter:drop-shadow(0 0 34px rgba(255,77,148,.95)) drop-shadow(0 0 70px rgba(181,123,255,.65));
+  transition:transform .3s ease;
+}
+.big-heart:hover{transform:scale(1.07);}
+.big-heart:active{transform:scale(.94);}
+
+.hug-btn{margin-top:6px;}
+
+.hug-msg{
+  max-width:560px;
+  margin:26px auto 0;
+  padding:0 6px;
+  opacity:0;
+  transform:translateY(22px) scale(.96);
+  transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.3,1.3);
+  pointer-events:none;
+}
+.hug-msg.show{
+  opacity:1;
+  transform:none;
+}
+.hug-card{
+  padding:26px 22px;
+  border-radius:22px;
+  background:linear-gradient(160deg,rgba(255,77,148,.18),rgba(181,123,255,.16));
+  border:1px solid rgba(255,122,184,.4);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 20px 50px rgba(255,77,148,.3), inset 0 0 40px rgba(255,122,184,.12);
+}
+.hug-card h3{
+  font-family:'Dancing Script',cursive;
+  font-size:1.7rem;
+  color:var(--pink-soft);
+  margin-bottom:12px;
+  text-shadow:0 0 20px rgba(255,77,148,.6);
+}
+.hug-card p{
+  font-size:.92rem;
+  line-height:1.8;
+  color:#f6ebff;
+  opacity:.92;
+}
+.hug-emoji{
+  font-size:2.6rem;
+  display:block;
+  margin-bottom:8px;
+  animation:hugSway 2.2s ease-in-out infinite;
+}
+@keyframes hugSway{
+  0%,100%{transform:rotate(-7deg) scale(1);}
+  50%{transform:rotate(7deg) scale(1.1);}
+}
+
+.burst-heart{
+  position:fixed;
+  z-index:300;
+  pointer-events:none;
+  animation:burstOut 1.35s cubic-bezier(.15,.7,.35,1) forwards;
+  will-change:transform,opacity;
+}
+@keyframes burstOut{
+  0%{transform:translate(-50%,-50%) scale(.35) rotate(0deg);opacity:1;}
+  70%{opacity:.9;}
+  100%{
+    transform:translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.25) rotate(200deg);
+    opacity:0;
+  }
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding:44px 20px 56px;
+  font-size:.78rem;
+  letter-spacing:1.4px;
+  color:var(--lav);
+  opacity:.55;
+  line-height:2;
+}
+footer .f-heart{
+  color:var(--pink-hot);
+  filter:drop-shadow(0 0 10px var(--pink-hot));
+  animation:beat 2s ease-in-out infinite;
+  display:inline-block;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width:520px){
+  .section{padding:68px 18px;}
+  .reason{height:215px;}
+  .reason-back .rb-text{font-size:.68rem;line-height:1.38;}
+  .reason-back .rb-title{font-size:.7rem;}
+  .letter-card{padding:32px 20px 30px;}
+  .letter-card p{font-size:.94rem;line-height:1.85;}
+  .special-note{padding:20px 20px 22px 24px;}
+  .paper{padding:42px 20px 46px;}
+  .stats{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .stat-num{font-size:1.2rem;}
+  .timeline{padding-left:38px;}
+  .tl-item::before{left:-38px;width:32px;height:32px;font-size:.8rem;}
+  .timeline::before{left:15px;}
+}
+
+@media (hover:none){
+  .tl-card:hover{transform:none;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+
+<body class="locked">
+
+<div class="aurora"></div>
+<div id="heartsBg"></div>
+
+<!-- ============================================================
+     SECTION 1 — OPENING SCREEN
+============================================================ -->
+<section class="opening" id="opening">
+  <div class="beat-heart">💖</div>
+  <p class="kicker">7 Months of Us</p>
+  <h1>
+    For My Jannuuu
+    <span class="name">Kritika ❤️</span>
+  </h1>
+  <p class="sub">A little something I made with my whole heart, only for you. Ready?</p>
+
+  <button class="btn" id="openBtn">
+    <span class="btn-pulse"></span>
+    Open Your Surprise 🎁
+  </button>
+
+  <p class="made">Made with love • just for you</p>
+</section>
+
+<main id="main">
+
+  <!-- ---------- SECTION 2 : PERSONAL MESSAGE (UPDATED) ---------- -->
+  <section class="section" id="message">
+    <h2 class="sec-title reveal">A Little Message For You</h2>
+    <p class="sec-sub reveal" style="--d:.08s">Just a few words from the boy who's completely, hopelessly yours.</p>
+    <div class="divider reveal" style="--d:.12s"><span></span><i>❥</i><span></span></div>
+
+    <div class="glow-frame reveal" style="--d:.16s">
+      <div class="letter-card">
+        <span class="quote-mark">❝</span>
+        <p class="hi">Hey Jannuuu 💕</p>
+        <p>
+          jaanuuuuuuuuuu haapyyy relationnn anniversaryyy darlooooooo yrrrr deviii jiiiii thankyouu
+          thankyouu soo muchh meriii hrr mushkilo m sathh denee kaaa yrrrrr i loveeee youuu soo
+          muchhhhhhhhh infiniteeeeee yrrrrr...
+        </p>
+        <p>
+          appp prr yrr m apne se bhii jyadaa trustt krtaa huuu yrr or trkoo trsee jyadaa jantaa hu
+          bbyyyy m dekhloooo yrrrr in 7 mahinoo m mrkooo to bahutt mjaaa ayaaaa yrrrrrrr apkee sathh
+          baatee krneee kaa apkoo gussaa dilana apkee mjee lenaa orr nichh baatee krnaa yrrrrrrr bbyyy
+        </p>
+        <p>
+          bsss esee hii sathhh rhiyooo merii lifeee m every second every mminute every hourrr yrrrrr
+          youu aree my foreverr andd againn happyy 7th relation aniversary
+        </p>
+        <p class="sign">— Yours, always 💗</p>
+      </div>
+    </div>
+
+    <div class="special-note reveal" style="--d:.2s">
+      <span class="sn-label">💬 a little extra from your bbyy</span>
+      <p>
+        hloooooooooo jaannuuu finallyy hmee sathh m puree 7 mahinee ho chukeeee h dekhloooo yrrr ek
+        dusreee koo hmnee inti barr maafff kiyaa h bss bbyy esee hi sathhh rhiyooo abhii tooo hmee
+        purii lifetime sathh rhneaaa h jaanuuuuuuuuuuuu orr haa haapyyy relation anniversaryyy myy
+        bbyyyy myy everythingg
+        <span class="sn-heart">💖</span>
+      </p>
+    </div>
+
+    <div class="stats reveal" id="stats" style="--d:.26s">
+      <div class="stat">
+        <span class="stat-num" data-target="7">0</span>
+        <span class="stat-label">Months</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="30" id="statWeeks">0</span>
+        <span class="stat-label">Weeks</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="213" id="statDays">0</span>
+        <span class="stat-label">Days</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Love</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 3 : SEVEN REASONS ---------- -->
+  <section class="section" id="reasons">
+    <h2 class="sec-title reveal">7 Reasons Why I Love You</h2>
+    <p class="sec-sub reveal" style="--d:.08s">One for every month. Tap a card to open it 💌</p>
+    <div class="divider reveal" style="--d:.12s"><span></span><i>❥</i><span></span></div>
+
+    <div class="reasons">
+
+      <div class="reason reveal" style="--d:.04s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">1</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">😊</span>
+            <span class="rb-title">Your Smile</span>
+            <span class="rb-text">apkii smilee yrr kitnii mstt smilee h yrr apkiiiiiii m too fidaa hu apkiii is smile se</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reason reveal" style="--d:.08s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">2</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">🌀</span>
+            <span class="rb-title">Your Curls</span>
+            <span class="rb-text">yrr apkee baalll yrrrrrrrrrrrrrrrrrrr curlss hokrr kitnee mstt lgtee h ywrrrr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reason reveal" style="--d:.12s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">3</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">🌸</span>
+            <span class="rb-title">Your Face</span>
+            <span class="rb-text">yrr apkaa faceeee golmatoll saaa yrrrr orrr sundarii jesaa yrrr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reason reveal" style="--d:.16s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">4</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">🔒</span>
+            <span class="rb-title">Your Loyalty</span>
+            <span class="rb-text">apkiii loyaltyyyyyyy yrrr app mrkoooo bahutt pyaar krtee ho ikkk</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reason reveal" style="--d:.2s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">5</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">👀</span>
+            <span class="rb-title">Your Eyes</span>
+            <span class="rb-text">apkii eyesss yrrrr ye to weaponn h puraa mrko maarne ke liee</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reason reveal" style="--d:.24s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">6</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">🥰</span>
+            <span class="rb-title">Your Dole Shole</span>
+            <span class="rb-text">apkee dolee sholee yrrrrrr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reason reveal" style="--d:.28s">
+        <div class="reason-inner">
+          <div class="reason-face reason-front">
+            <span class="num">7</span>
+            <span class="tap">Tap me</span>
+            <span class="tiny-heart">💗</span>
+          </div>
+          <div class="reason-face reason-back">
+            <span class="rb-icon">✨</span>
+            <span class="rb-title">Your Waist</span>
+            <span class="rb-text">yourr waisttt yrrrrrrr ptliii kmrrrrr ek dmm ywrrrr</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 5 : HEARTFELT LETTER ---------- -->
+  <section class="section" id="letter">
+    <h2 class="sec-title reveal">A Letter From My Heart</h2>
+    <p class="sec-sub reveal" style="--d:.08s">Read it slowly. Every word is true.</p>
+    <div class="divider reveal" style="--d:.12s"><span></span><i>❥</i><span></span></div>
+
+    <div class="paper-wrap reveal" style="--d:.16s">
+      <div class="paper">
+        <p class="p-head">My Dearest Deviii Jii,</p>
+
+        <p>
+          finnalyy yrr hme 7 mahine ho chukee h deviii jii esee hii mere sathh rhiyoo hmesha
+          hmeshaa kee lieeee i loveeeeee youuuuu soooo muchhhhhhhh
+        </p>
+
+        <p>
+          apkoo ptaaa h m apkoo itnaa pyaarr krtaa huuu jitnaa app sochh bhii ni sktee jaanuuuuu
+          bss yrr mrpee wordsss niiii h yrrrr
+        </p>
+
+        <p>
+          appp yrr schhii m bahutt achhee hoo yrrrr bbyyy bahutt jyadaa meree liieee tuu merii
+          duniyaa h ywrrr babuuuuuu my jaanuuuuuuuuuuuuuu
+        </p>
+
+        <p>
+          bss yrr esee hii maaff krtee rhiyoo mrkoo chodkrr kbhii mtt jaiyoo darlooo youu aree myy
+          everythinggggg smjhooo naa yrr appp bhiii apppkee binaa m kuchh nii huu 1 percent bhiii
+          niii yywrrrrr
+        </p>
+
+        <p>
+          orr apkoo ptaa h app kitne achhe ho ywrr bahutt jyada bbbyyyyyyyyyy app itnee sundarii ho
+          yrr bahuttt abhii jbb ap engagment pr gye thee itnee mstt lgree theee naa yrrr mn to kr
+          ra thaa udhrr akrr trkoo kiss duuu yrrrrrrrr bbyyyy dugguuu
+        </p>
+
+        <p>
+          lysmmmmmmmmmmmmmm bbyyyyyyyy chlll happyy 7th relation anniversaryy bbyyyy
+        </p>
+
+        <p class="p-sign">
+          Forever yours,<br>
+          Your Jannuuu 💕
+        </p>
+
+        <div class="seal">💌</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 6 : OUR FUTURE ---------- -->
+  <section class="section" id="future">
+    <h2 class="sec-title reveal">Our Future Together</h2>
+    <p class="sec-sub reveal" style="--d:.08s">All the little things I can't wait to do with you.</p>
+    <div class="divider reveal" style="--d:.12s"><span></span><i>❥</i><span></span></div>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal" style="--d:.04s">
+        <div class="tl-card">
+          <h4>🌅 Every Sunrise Together</h4>
+          <p>Waking up to your voice, your messy hair, and that sleepy smile — for as many mornings as the universe will give me.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--d:.08s">
+        <div class="tl-card">
+          <h4>✈️ A Hundred Little Adventures</h4>
+          <p>New cities, silly road trips, late-night food runs, and that one trip we keep planning but never booking. Let's finally book it.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--d:.12s">
+        <div class="tl-card">
+          <h4>💬 Fights That End In Hugs</h4>
+          <p>Because even our disagreements will always end with me choosing you. Again, and again, and again.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--d:.16s">
+        <div class="tl-card">
+          <h4>🌱 Growing Together</h4>
+          <p>Careers, dreams, tiny wins, big wins. I want to be the loudest one cheering for every single thing you achieve.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--d:.2s">
+        <div class="tl-card">
+          <h4>🏡 A Home That Smells Like Us</h4>
+          <p>Somewhere with warm lights, a messy kitchen, way too many pillows, and one corner that's completely, undeniably ours.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" style="--d:.24s">
+        <div class="tl-card">
+          <h4>💍 And One Day… Forever</h4>
+          <p>A ring, a promise, a "yes" — and then a whole life of ordinary days made extraordinary simply because you're in them.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ---------- SECTION 7 : FINAL SURPRISE ---------- -->
+  <section class="section final" id="surprise">
+    <h2 class="sec-title reveal">One Last Surprise</h2>
+    <p class="sec-sub reveal" style="--d:.08s">Go on… tap the heart. I dare you 💗</p>
+    <div class="divider reveal" style="--d:.12s"><span></span><i>❥</i><span></span></div>
+
+    <div class="big-heart reveal" id="bigHeart" style="--d:.16s" role="button" tabindex="0" aria-label="Tap for a virtual hug">💗</div>
+
+    <div style="margin-top:10px;" class="reveal" style="--d:.2s">
+      <button class="btn hug-btn" id="hugBtn">
+        <span class="btn-pulse"></span>
+        Send Me A Virtual Hug 🤗
+      </button>
+    </div>
+
+    <div class="hug-msg" id="hugMsg">
+      <div class="hug-card">
+        <span class="hug-emoji">🤗</span>
+        <h3>Consider Yourself Hugged</h3>
+        <p>
+          Tightly. Warmly. For a very, very long time. Close your eyes for a second and imagine my
+          arms around you — that's exactly where you belong, and exactly where I'll always be.
+          <br><br>
+          Happy 7 months, my Jannuuu. Here's to us — and to forever. ❤️
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Made with <span class="f-heart">❤</span> just for you, Kritika<br>
+  7 months • and counting • ∞
+</footer>
+
+<script>
+/* ============================================================
+   1. FLOATING HEARTS BACKGROUND
+============================================================ */
+(function floatingHearts(){
+  const container = document.getElementById('heartsBg');
+  const symbols = ['❤','💗','💖','💕','💜','🩷','✨','💞'];
+  const count = window.innerWidth < 600 ? 18 : 30;
+
+  for (let i = 0; i < count; i++){
+    const h = document.createElement('div');
+    h.className = 'heart-float';
+    h.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+    const size = 11 + Math.random() * 22;
+    h.style.fontSize = size + 'px';
+    h.style.left = (Math.random() * 100) + 'vw';
+    h.style.color = Math.random() > .5 ? '#ff7ab8' : '#b57bff';
+    h.style.opacity = (0.16 + Math.random() * 0.34).toFixed(2);
+    h.style.animationDuration = (11 + Math.random() * 13).toFixed(1) + 's';
+    h.style.animationDelay = (-Math.random() * 24).toFixed(1) + 's';
+
+    container.appendChild(h);
+  }
+})();
+
+/* ============================================================
+   2. OPENING SCREEN
+============================================================ */
+const opening = document.getElementById('opening');
+const openBtn = document.getElementById('openBtn');
+
+function openSurprise(){
+  opening.classList.add('hide');
+  document.body.classList.remove('locked');
+  setTimeout(() => { opening.style.display = 'none'; }, 1200);
+}
+
+openBtn.addEventListener('click', openSurprise);
+
+/* ============================================================
+   3. SCROLL REVEAL ANIMATIONS
+============================================================ */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ============================================================
+   4. FLIP CARDS — 7 REASONS
+============================================================ */
+document.querySelectorAll('.reason').forEach(card => {
+  const toggle = () => card.classList.toggle('flipped');
+
+  card.addEventListener('click', toggle);
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      toggle();
+    }
+  });
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
+});
+
+/* ============================================================
+   5. LIVE DAYS / WEEKS COUNTER
+   🔧 Change MONTHS_TOGETHER if the count is different.
+============================================================ */
+const MONTHS_TOGETHER = 7;
+const startDate = new Date();
+startDate.setMonth(startDate.getMonth() - MONTHS_TOGETHER);
+
+const msPerDay = 1000 * 60 * 60 * 24;
+const daysTogether  = Math.max(1, Math.floor((Date.now() - startDate.getTime()) / msPerDay));
+const weeksTogether = Math.max(1, Math.floor(daysTogether / 7));
+
+document.getElementById('statDays').dataset.target  = daysTogether;
+document.getElementById('statWeeks').dataset.target = weeksTogether;
+
+function animateNumber(el, target, duration = 1500){
+  const start = performance.now();
+  function step(now){
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(target * eased);
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const statsEl = document.getElementById('stats');
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      statsEl.querySelectorAll('.stat-num[data-target]').forEach(el => {
+        animateNumber(el, parseInt(el.dataset.target, 10));
+      });
+      statsObserver.unobserve(statsEl);
+    }
+  });
+}, { threshold: 0.4 });
+
+if (statsEl) statsObserver.observe(statsEl);
+
+/* ============================================================
+   6. FINAL SURPRISE — HEART BURST + VIRTUAL HUG
+============================================================ */
+const bigHeart = document.getElementById('bigHeart');
+const hugBtn   = document.getElementById('hugBtn');
+const hugMsg   = document.getElementById('hugMsg');
+const burstSymbols = ['❤','💗','💖','💕','💜','✨','🩷'];
+
+function heartBurst(sourceEl){
+  const rect = sourceEl.getBoundingClientRect();
+  const cx = rect.left + rect.width / 2;
+  const cy = rect.top + rect.height / 2;
+  const total = window.innerWidth < 600 ? 22 : 34;
+
+  for (let i = 0; i < total; i++){
+    const h = document.createElement('div');
+    h.className = 'burst-heart';
+    h.textContent = burstSymbols[Math.floor(Math.random() * burstSymbols.length)];
+
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 70 + Math.random() * 240;
+
+    h.style.left = cx + 'px';
+    h.style.top  = cy + 'px';
+    h.style.fontSize = (13 + Math.random() * 24) + 'px';
+    h.style.setProperty('--tx', (Math.cos(angle) * distance).toFixed(1) + 'px');
+    h.style.setProperty('--ty', (Math.sin(angle) * distance).toFixed(1) + 'px');
+    h.style.animationDelay = (Math.random() * 0.18).toFixed(2) + 's';
+
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 1700);
+  }
+}
+
+function showHug(sourceEl){
+  heartBurst(sourceEl);
+  hugMsg.classList.add('show');
+  setTimeout(() => {
+    hugMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 420);
+}
+
+bigHeart.addEventListener('click', () => showHug(bigHeart));
+bigHeart.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' '){
+    e.preventDefault();
+    showHug(bigHeart);
+  }
+});
+
+hugBtn.addEventListener('click', () => showHug(bigHeart));
+
+/* ============================================================
+   7. SPARKLE ON TAP
+============================================================ */
+let lastSparkle = 0;
+document.addEventListener('click', (e) => {
+  const now = Date.now();
+  if (now - lastSparkle < 220) return;
+  lastSparkle = now;
+
+  if (e.target.closest('#bigHeart') || e.target.closest('#openBtn')) return;
+
+  const s = document.createElement('div');
+  s.textContent = '✨';
+  s.style.cssText = `
+    position:fixed;
+    left:${e.clientX}px;
+    top:${e.clientY}px;
+    transform:translate(-50%,-50%);
+    font-size:14px;
+    pointer-events:none;
+    z-index:299;
+    animation:burstOut 0.9s ease-out forwards;
+    --tx:${(Math.random()*60-30).toFixed(0)}px;
+    --ty:${(-40-Math.random()*40).toFixed(0)}px;
+  `;
+  document.body.appendChild(s);
+  setTimeout(() => s.remove(), 1000);
+});
+</script>
+
+  <!-- Background song: starts when the surprise is opened (browser-friendly) -->
+  <audio id="anniversarySong" preload="auto" loop>
+    <source src="Jab-Tak.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicToggle" type="button" aria-label="Pause or play music"
+    style="position:fixed;right:16px;bottom:16px;z-index:500;border:1px solid rgba(255,255,255,.3);
+    border-radius:999px;padding:12px 16px;color:#fff;background:linear-gradient(135deg,#ff4d94,#8b5cf6);
+    font:600 14px Quicksand, sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer;">
+    ♫ Play Music
+  </button>
+  <script>
+    const anniversarySong = document.getElementById('anniversarySong');
+    const musicToggle = document.getElementById('musicToggle');
+    async function playAnniversarySong() {
+      try {
+        await anniversarySong.play();
+        musicToggle.textContent = '♫ Pause Music';
+      } catch (err) {
+        musicToggle.textContent = '♫ Play Music';
+      }
+    }
+    openBtn.addEventListener('click', playAnniversarySong);
+    musicToggle.addEventListener('click', async () => {
+      if (anniversarySong.paused) {
+        await playAnniversarySong();
+      } else {
+        anniversarySong.pause();
+        musicToggle.textContent = '♫ Play Music';
+      }
+    });
+  </script>
+
+</body>
+</html>
